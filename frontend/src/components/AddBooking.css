@@ -1,0 +1,87 @@
+.add-booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1210px;
+  margin: 50px auto;
+  background-color: #f3e9e9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.booking-form form input,
+.booking-form form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.booking-form form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.booking-form form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form form button:hover {
+  background-color: #555;
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.booking-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.booking-image img {
+  max-width: 108%;
+  height: 77%;
+  object-fit: inherit;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the layout adjusts for smaller screens */
+@media (max-width: 768px) {
+  .add-booking-grid {
+    grid-template-columns: 1fr; /* Stack the form and image on top of each other */
+  }
+
+  .booking-image {
+    margin-bottom: 20px; /* Add spacing between the form and the image */
+  }
+}

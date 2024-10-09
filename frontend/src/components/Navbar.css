@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #124704;
+  color: #fff;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar h1 a {
+  color: #ff0000; /* Change this to your desired color */
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.navbar h1 a:hover {
+  color: #f39c12; /* Hover color */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12; /* Hover effect for links */
+}
