@@ -20,10 +20,26 @@ mongoose.connect(process.env.MONGO_URI, {
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
+  app.get('/', (req, res) => {
+    res.send(`
+      <html>
+        <head>
+          <title>Backend Server</title>
+        </head>
+        <body style="font-family: Arial, sans-serif;">
+          <h1 style="color: green;">Backend Server is Running!</h1>
+          <p>You can access the API at <strong>${req.protocol}://${req.get('host')}/api</strong></p>
+        </body>
+      </html>
+    `);
+  });
+
 app.use('/graphql', graphqlHTTP({
   schema,
   graphiql: true,
 }));
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
